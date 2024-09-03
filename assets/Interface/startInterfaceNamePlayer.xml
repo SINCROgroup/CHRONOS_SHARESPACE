@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- start screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="startPlayer" controller="HumanPlayer.Presentation.StartScreenNamePlayerAppState">
+
+        <layer id="backgroundlayer" height="100%" width="100%" childLayout="center"
+               backgroundImage="Interface/Images/startAdmin_background.jpg">
+        </layer>
+
+        <layer id="foregroundlayer" childLayout="vertical">
+            <panel id="panel_top" height="2%" width="90%" valign="top"></panel>
+            <panel height="7%" width="70%" valign="center">
+            </panel>
+            <text font="Interface/Fonts/Default.fnt" color="#ffff"
+                  text="Thank you for participating in this experimental campaign!" textVAlign="center"
+                  textHAlign="center" height="3%" width = "100%" id="textThanks">
+            </text>
+            <text font="Interface/Fonts/Default.fnt" color="#ffff"
+                  text="The data you provide us is confidential and will be handled in accordance with current regulations." textVAlign="center"
+                  textHAlign="center" height="3%" width = "100%" id="textData">
+            </text>
+            <panel height="7%" width="70%" valign="center">
+            </panel>
+            <panel id="panel_set" height="40%" width="80%" align="center" valign = "center"
+                   childLayout="vertical" backgroundColor = "#ffff">
+                <panel height="10%" width="100%" valign="center">
+                </panel>
+
+                <panel height="4%" width="100%" valign="center">
+                </panel>
+                <panel id="panel_2" width="100%" height="10%" childLayout="horizontal">
+                    <panel width="34%"> </panel>
+
+                    <panel width="15%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Gender: " textVAlign="center"
+                          textHAlign="center" height="100%" width = "14%"></text>
+                    <control id="input_gender" name="dropDown" width="27%"
+                             height = "100%" valign = "center" align = "left">
+                    </control>
+                </panel>
+                <panel height="4%" width="100%" valign="center">
+                </panel>
+                <panel id="panel_3" width="100%" height="10%" childLayout="horizontal">
+                    <panel width="7%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Nationality: " textVAlign="center"
+                          textHAlign="center" height="100%" width = "14%"></text>
+                    <control id="input_nationality" name="textfield" width="20%"
+                             height = "100%" valign = "center" align = "left">
+                    </control>
+                    <panel width="4%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Date of birth [DD/MM/YYYY]: " textVAlign="center"
+                          textHAlign="center" height="100%" width = "32%"></text>
+                    <control id="input_day" name="textfield" width="5%"
+                             height = "100%" valign = "center" align = "left">
+                    </control>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="/" textVAlign="center"
+                          textHAlign="center" height="100%" width = "2%"></text>
+                    <control id="input_month" name="textfield" width="5%"
+                             height = "100%" valign = "center" align = "left">
+                    </control>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="/" textVAlign="center"
+                          textHAlign="center" height="100%" width = "2%"></text>
+                    <control id="input_year" name="textfield" width="6%"
+                             height = "100%" valign = "center" align = "left">
+                    </control>
+                </panel>
+                <panel height="4%" width="100%" valign="center">
+                </panel>
+                <panel id="panel_4" width="100%" height="10%" childLayout="horizontal">
+                    <panel width="7%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Occupation: " textVAlign="center"
+                          textHAlign="center" height="100%" width = "14%"></text>
+                    <control id="input_occupation" name="textfield" width="20%"
+                             height = "100%" valign = "center" align = "left">
+                    </control>
+                    <panel width="15%"> </panel>
+
+                </panel>
+                <panel height="6%" width="100%" valign="center">
+                </panel>
+                <panel id="panel_5" width="100%" height="10%" childLayout="horizontal">
+                    <panel width="7%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Have you already participated in experiments like this?: " textVAlign="center"
+                          textHAlign="center" height="100%" width = "63%"></text>
+                    <control id="input_already" name="dropDown" width="20%"
+                             height = "100%" valign = "center" align = "left">
+                    </control>
+                </panel>
+                <panel height="6%" width="100%" valign="center">
+                </panel>
+                <panel id="panel_6" width="100%" height="10%" childLayout="horizontal">
+                    <panel width="7%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Select server connection:" textVAlign="center" align="center"
+                          textHAlign="left" height="100%" width = "30%">
+                    </text>
+
+                    <control id="connection_server" name="dropDown" width="20%"
+                             height = "100%" valign = "center" align="center" >
+                    </control>
+                    <panel width="10%"> </panel>
+                    <panel id="panel_IP" height = "100%"  valign="center" align="center" childLayout="horizontal">
+
+                        <control id="IP1" name="textfield" width="20%"
+                                 height = "100%" valign = "center" align = "right">
+                        </control>
+                        <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                              text="." textVAlign="center"
+                              textHAlign="center" height="100%" width = "3%"></text>
+                        <control id="IP2" name="textfield" width="20%"
+                                 height = "100%" valign = "center" align = "center">
+                        </control>
+                        <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                              text="." textVAlign="center"
+                              textHAlign="center" height="100%" width = "3%"></text>
+                        <control id="IP3" name="textfield" width="20%"
+                                 height = "100%" valign = "center" align = "center">
+                        </control>
+                        <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                              text="." textVAlign="center"
+                              textHAlign="center" height="100%" width = "3%"></text>
+                        <control id="IP4" name="textfield" width="20%"
+                                 height = "100%" valign = "center" align = "center">
+                        </control>
+                    </panel>
+                </panel>
+            </panel>
+            <panel id="panel_bottom" height="15%" width="98%" valign="bottom" childLayout="horizontal">
+                <panel id="panel_left" height="100%" width="38%" valign="bottom" childLayout="center">
+                </panel>
+                <panel id="panel_center" height="70%" width="30%" valign="bottom" childLayout="horizontal">
+                    <control
+                            name="button" label="Set" id="setButton" align="center"
+                            valign="center"
+                            width="80%"
+                            height="80%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="Setting()"/>
+                    </control>
+                </panel>
+                <panel id="panel_right" height="100%" width="35%" valign="bottom" childLayout="center">
+                </panel>
+            </panel>
+        </layer>
+    </screen>
+
+</nifty>

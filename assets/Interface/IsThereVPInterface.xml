@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+
+    <screen id="IsThere" controller="HumanPlayer.Presentation.IsThereVP">
+        <layer id="backgroundlayer" height="100%" width="100%" childLayout="center"
+               backgroundImage="Interface/Images/startAdmin_background.jpg">
+        </layer>
+
+        <layer id="foregroundlayer" childLayout="vertical">
+            <panel height="2%" width="70%" valign="center"> </panel>
+            <panel id="panel_top" height="43%" width="80%" align="center" valign="center" backgroundColor = "#ffff" childLayout="vertical">
+                <panel height="10%" width="70%" valign="center"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Do you think one VP played with you during the previous trial? " valign="center"
+                          align="center" height="10%" width = "100%"></text>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="If yes, please indicate his position" valign="center"
+                          align="center" height="10%" width = "100%"></text>
+                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                      text="if you think there were no VPs, write 0," valign="center"
+                      align="center" height="10%" width = "100%"></text>
+                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                      text="if you don't know, type 8)." valign="center"
+                      align="center" height="10%" width = "100%"></text>
+                <panel height="10%" width="70%" valign="center"> </panel>
+                <control id="input_VP" name="textfield" width="40%"
+                         height = "10%" valign = "center" align = "center">
+                </control>
+            </panel>
+            <panel height="10%" width="70%" valign="center"> </panel>
+            <panel id="panel_bottom" height="20%" width="98%" valign="center" childLayout="vertical">
+                <control
+                        name="button" label="SET" id="setButton" align="center"
+                        valign="center"
+                        width="40%"
+                        height="50%"
+                        visibleToMouse="true"
+                        font="Interface/Fonts/BookmanOldStyle.fnt">
+                    <interact onClick="set()"/>
+                </control>
+            </panel>
+        </layer>
+    </screen>
+</nifty>

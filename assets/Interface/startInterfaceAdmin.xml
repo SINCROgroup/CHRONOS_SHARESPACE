@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+<!--    <useStyles style="Interface/nifty-controls/nifty-button.xml"/> -->
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- start screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="startAdmin" controller="Administrator.Presentation.StartScreenAppState">
+
+        <layer id="backgroundlayer" height="100%" width="100%" childLayout="center"
+               backgroundImage="Interface/Images/startAdmin_background.jpg">
+        </layer>
+
+        <layer id="foregroundlayer" childLayout="vertical">
+            <panel id="panel_top" height="45%" width="70%" align="center" childLayout="center">
+                <image filename="Interface/Images/welcomeUnina.png" height="90%" width="100%"></image>
+            </panel>
+            <panel id="panel_bottom" height="55%" width="98%" valign="center" childLayout="horizontal">
+                <panel id="panel_bottom_left" height="100%" width="35%" valign="bottom" childLayout="center">
+                </panel>
+                <panel id="panel_bottom_center" height="70%" width="30%" valign="center" childLayout="vertical">
+                    <control
+                        name="button" label="Setting test" id="SettingTestButton" align="center"
+                        width="85%"
+                        height="23%"
+                        visibleToMouse="true"
+                        font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="SetTest(set)"/>
+                    </control>
+                    <panel height="8%" width="30%" valign="center"></panel>
+                    <control
+                            name="button" label="Execution test" id="executionTestButton" align="center"
+                            width="85%"
+                            height="23%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                            <interact onClick="ExecTest(test)"/>
+                    </control>
+                    <panel height="8%" width="30%" valign="center"></panel>
+
+                </panel>
+                <panel id="panel_bottom_right" height="100%" width="35%" valign="bottom" childLayout="center">
+                </panel>
+            </panel>
+        </layer>
+    </screen>
+
+</nifty>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" /> 
+    
+    
+    <screen id="hudPlayer" controller="HumanPlayer.Presentation.PlayScreenPlayerAppState">
+        <layer id="background" childLayout="center"
+               backgroundImage="Interface/Images/hud-frame.png">
+               <image id="gameGo" filename = "Interface/Images/54321-go.png">
+               		<effect>
+               		<onStartScreen name="fade" start="#f" end="#0" length="5000" 
+               		timeType="exp" factor="10" neverStopRendering="true" />
+               		</effect>
+               </image>
+        </layer>
+    </screen>
+    
+    <screen id="hudHPPlayer" controller="HumanPlayer.Presentation.PlayHPScreenPlayerAppState">
+        <layer id="background" childLayout="center"
+               backgroundImage="Interface/Images/hud-frame.png">
+               <image id="gameGo" filename = "Interface/Images/54321-go.png">
+               		<effect>
+               		<onStartScreen name="fade" start="#f" end="#0" length="5000" 
+               		timeType="exp" factor="10" neverStopRendering="true" />
+               		</effect>
+               </image>
+        </layer>
+    </screen>
+    
+    <screen id="hudNetworkPlayer" controller="HumanPlayer.Presentation.PlayNetworkScreenPlayerAppState">
+        <layer id="background" childLayout="center"
+               backgroundImage="Interface/Images/corniceBlu.png">
+               <image id="gameGo" filename = "Interface/Images/54321-go.png">
+               		<effect>
+               		<onStartScreen name="fade" start="#f" end="#0" length="5000" 
+               		timeType="exp" factor="10" neverStopRendering="true" />
+               		</effect>
+               </image>
+        </layer>
+    </screen>
+      
+</nifty>

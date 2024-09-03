@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" /> 
+    
+	<screen id="plotPlayer" controller="HumanPlayer.Presentation.PlotScreenPlayerAppState">
+	        
+	       <layer id="backgroundlayer" height="100%" width="100%" childLayout="center" 
+	               backgroundImage="Interface/Images/startAdmin_background.jpg">   
+	       </layer>
+	       
+	       <layer id="foregroundlayer" childLayout="vertical">
+	       
+	       <panel height="10%" width="70%" valign="center">                     
+           </panel>
+           
+           <panel id="panel_top" height="20%" width="70%" align="center" valign = "center" 
+        			childLayout="vertical"
+        			backgroundColor = "#ffff">
+        		<panel height="10%" width="70%" valign="center">                     
+           		</panel>        	
+        		<text font="Interface/Fonts/Default.fnt" color="#f00f" text="Choose the plot to display" 
+        			textHAlign="center" textVAlign="center"
+        			width="100%" height="40%"> </text>
+        		<panel height="10%" width="70%" valign="center">                     
+           		</panel>	
+        		<control id="input_plot" name="dropDown" width="50%"
+	        				 height = "18%" valign = "top" align = "center"> 
+	        	</control>
+	        	<panel height="20%" width="70%" valign="center">                     
+           		</panel>
+        	</panel>
+	       
+	       <panel height="5%" width="70%" valign="center">                     
+           </panel>
+	       
+	       <panel id="panel_bottom" height="65%" width="98%" valign="center" childLayout="horizontal"> 
+                <panel id="panel_left" height="85%" width="35%" valign="bottom" childLayout="center">
+                </panel>
+                <panel id="panel_center" height="70%" width="30%" valign="bottom" childLayout="vertical">
+                    <control 
+                             name="button" label="View plot" id="plotButton" align="center"
+                             valign="center"
+                             width="80%"
+                             height="20%"
+                             visibleToMouse="true"
+                             font="Interface/Fonts/BookmanOldStyle.fnt">                          
+                            <interact onClick="viewPlot()"/>
+                    </control>
+                    <panel height="10%" width="30%" valign="center">                     
+                    </panel>
+                    <control 
+                             name="button" label="Try again" id="tryButton" align="center"
+                             valign="center"
+                             width="80%"
+                             height="20%"
+                             visibleToMouse="true"
+                             font="Interface/Fonts/BookmanOldStyle.fnt">                          
+                            <interact onClick="tryAgain()"/>
+                    </control>
+                    <panel height="10%" width="30%" valign="center">                     
+                    </panel>
+                    <control 
+                             name="button" label="Quit" id="quitButton" align="center"
+                             valign="center"
+                             width="80%"
+                             height="20%"
+                             visibleToMouse="true"
+                             font="Interface/Fonts/BookmanOldStyle.fnt">                          
+                            <interact onClick="quit()"/>
+                    </control>
+                </panel>
+                <panel id="panel_right" height="85%" width="35%" valign="bottom" childLayout="center">  
+                </panel>
+            </panel>
+	       
+	       </layer>	
+	       
+	</screen>
+</nifty>

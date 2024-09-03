@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+    
+    <screen id="loading" controller="Administrator.Presentation.WaitScreenAppState">
+    	<layer id="backgroundlayer" height="100%" width="100%" childLayout="center" 
+               backgroundImage="Interface/Images/startAdmin_background.jpg">   
+        </layer>
+        
+        <layer id="foregroundlayer" childLayout="vertical">
+        	<panel height="2%" width="70%" valign="center"> </panel>
+            <panel id="panel_top" height="43%" width="60%" align="center" valign="center"
+            		backgroundColor = "#ffff" childLayout="vertical">
+            	<panel height="2%" width="70%" valign="center"> </panel>
+                <panel id="panel_2" height="10%" width="100%" valign="top" childLayout="center">
+                    <text font="Interface/Fonts/BookmanOldStyle.fnt" color="#f00f"
+                          text="All the player connected" textHAlign="center" textVAlign="top"
+                          width="100%" height="15%"> </text>
+                </panel>
+                <panel id="panel_1" height="10%" width="100%" valign="top" childLayout="center">
+                    <text font="Interface/Fonts/Default.fnt" color="#ffff"
+                          text="Waiting for the other players..." textVAlign="center" align="center"
+                          textHAlign="center" height="100%" width = "100%">
+                    </text>
+                </panel>
+
+                <image filename="Interface/Images/wait.jpg" valign="center" align="center"></image>
+            </panel>
+            <panel height="30%" width="70%" valign="center"> </panel>
+            <panel id="panel_bottom" height="50%" width="90%" valign="bottom" align="center" childLayout="vertical">
+                    <control name="button" label="PLAY" id="playButton" align="center"
+                             width="30%" height="20%" visibleToMouse="true"
+                             font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="play()"/>
+                    </control>
+            </panel>
+        </layer>    
+    </screen>
+</nifty>

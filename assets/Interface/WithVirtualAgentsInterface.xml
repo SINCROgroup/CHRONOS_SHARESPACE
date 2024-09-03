@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+
+    <screen id="WithVirtualAgents" controller="Administrator.Presentation.WithVirtualAgentsAppState">
+
+        <layer id="backgroundlayer" height="100%" width="100%" childLayout="center"
+               backgroundImage="Interface/Images/startAdmin_background.jpg">
+        </layer>
+
+        <layer id="foregroundlayer" childLayout="vertical">
+            <panel id="panel_top_network" height="2%" width="90%" valign="top"></panel>
+            <panel id="testNamePanel" height="5%" width="98%" valign="center" childLayout="horizontal">
+                <panel height="8%" width="5%" valign="center"></panel>
+                <text text="Test Name: " font="Interface/Fonts/BookmanOldStyle.fnt"  />
+                <control name="textfield" id="testNameField" width="70%" maxLength="50" />
+            </panel>
+            <panel height="1%" width="70%" valign="center">
+            </panel>
+
+            <panel id="panel_top" height="8%" width="90%" align="center" valign = "center"
+                   childLayout="vertical"
+                   backgroundColor = "#ffff">
+                <panel height="10%" width="70%" valign="center">
+                </panel>
+                <panel id="panel_time" height = "80%"  valign="center" align="center" childLayout="horizontal">
+                    <panel width="1%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Duration (s): " textVAlign="center"
+                          textHAlign="center" height="100%" width = "12%"></text>
+                    <control id="input_time" name="textfield" width="5%"
+                             height = "50%" valign = "center" align = "right">
+                    </control>
+
+                    <panel width="0.5%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="HA+VA [max 7]:" textVAlign="center"
+                          textHAlign="center" height="100%" width = "16%"></text>
+                    <control id="input_numPlayer" name="textfield" width="4%"
+                             height = "50%" valign = "center" align = "center">
+                    </control>
+
+                    <panel width="0.5%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="L2:" textVAlign="center"
+                          textHAlign="center" height="100%" width = "4%"></text>
+                    <control id="input_numL2" name="textfield" width="4%"
+                             height = "50%" valign = "center" align = "center">
+                    </control>
+                    <panel width="0.5%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="L3_A:" textVAlign="center"
+                          textHAlign="center" height="100%" width = "6%"></text>
+                    <control id="input_numL3_A" name="textfield" width="4%"
+                             height = "50%" valign = "center" align = "center">
+                    </control>
+                    <panel width="0.5%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="L3_S:" textVAlign="center"
+                          textHAlign="center" height="100%" width = "6%"></text>
+                    <control id="input_numL3_S" name="textfield" width="4%"
+                             height = "50%" valign = "center" align = "center">
+                    </control>
+                    <panel width="0.5%"> </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="AskIfVA[Y/N]: " textVAlign="center"
+                          textHAlign="center" height="100%" width = "14%"></text>
+                    <control id="input_ask" name="textfield" width="4%"
+                             height = "50%" valign = "center" align = "center">
+                    </control>
+                </panel>
+            </panel>
+
+            <panel id="panel_top_network" height="70%" width="90%" valign="top"
+                   align = "center" childLayout="vertical"
+                   backgroundColor = "#ffff">
+                <text font="Interface/Fonts/Default.fnt" color="#f00f"
+                      text="Choose the network topology"
+                      textHAlign="center" textVAlign="top" width="100%" height="10%"> </text>
+                <!-- <panel id="panel_space" height="10%"> </panel> -->
+                <panel id="panel_default_net" height="44%" width="100%" valign="center" align="center" childLayout="horizontal">
+                    <panel width="3%" align="left"> </panel>
+                    <panel id="net_topology" height="100%" width="30%" valign="center" align="left" childLayout="vertical">
+                        <panel height="5%"> </panel>
+                        <panel id="panel_topology" width="100%" height="30%" childLayout="vertical">
+                            <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                  text="Select topology:" textVAlign="center"
+                                  textHAlign="left" height="30%" width = "100%">
+                            </text>
+                            <panel height="15%"> </panel>
+                            <control id="input_network" name="dropDown" width="100%"
+                                     height = "40%" valign = "center" align = "left">
+                            </control>
+                        </panel>
+                        <panel id="panel_nodes" height="30%" width="90%" childLayout="horizontal" align="left" valign="center">
+                            <control id="single_node" name="label" color="#00f8" text="Sequence: "
+                                     font="Interface/Fonts/Default.fnt"
+                                     width="50%" height="40%" valign="top" align="left">
+                            </control>
+                            <control id="input_node1" name="textfield" width="12%"
+                                     height = "45%" valign = "center" align = "left">
+                            </control>
+                            <control id="input_node2" name="textfield" width="12%"
+                                     height = "45%" valign = "center" align = "left">
+                            </control>
+                            <control id="input_node3" name="textfield" width="12%"
+                                     height = "45%" valign = "center" align = "left">
+                            </control>
+                            <control id="input_node4" name="textfield" width="12%"
+                                     height = "45%" valign = "center" align = "left">
+                            </control>
+                            <control id="input_node5" name="textfield" width="12%"
+                                     height = "45%" valign = "center" align = "left">
+                            </control>
+                            <control id="input_node6" name="textfield" width="12%"
+                                     height = "45%" valign = "center" align = "left">
+                            </control>
+                            <control id="input_node7" name="textfield" width="12%"
+                                     height = "45%" valign = "center" align = "left">
+                            </control>
+                        </panel>
+                        <panel id="panel_direction" width="100%" height="40%" childLayout="vertical">
+                            <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                  text="Select direction:" textVAlign="center"
+                                  textHAlign="left" height="20%" width = "100%">
+                            </text>
+                            <panel height="15%"> </panel>
+                            <control id="input_direction" name="dropDown" width="100%"
+                                     height = "30%" valign = "center" align = "left">
+                            </control>
+                        </panel>
+                    </panel>
+
+                    <panel width="3%"> </panel>
+
+                    <panel id="net_details" height="100%" width="65%" valign="center" align="right" childLayout="vertical">
+                        <panel height="5%"> </panel>
+                        <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                              text="Adjacency matrix:" textVAlign="top"
+                              textHAlign="center" height="7%" width="100%"></text>
+                        <panel height="4%"> </panel>
+                        <panel id="panel_net" height="85%" width="100%" valign="center" align="left" childLayout="vertical">
+                            <control id="initial_row" name="label" color="#00f8"
+                                     text=""
+                                     font="Interface/Fonts/Default.fnt"
+                                     width="100%" height="23" valign="top" align="left">
+                            </control>
+
+                            <panel id="panel_rigo1" height="10%" width="100%" valign="top" align="center" childLayout="horizontal">
+                                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                      text="p1" textVAlign="center"
+                                      textHAlign="right" height="100%" width="20%"></text>
+                                <panel width="5%">
+                                </panel>
+                                <control id="11" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="12" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="13" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="14" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="15" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="16" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="17" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                            </panel>
+
+                            <panel height="2%"></panel>
+                            <panel id="panel_rigo2" height="10%" valign="top" align="right" childLayout="horizontal">
+                                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                      text="p2" textVAlign="center"
+                                      textHAlign="right" height="100%" width="20%"></text>
+                                <panel width="5%">
+                                </panel>
+                                <control id="21" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="22" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="23" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="24" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="25" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="26" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="27" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                            </panel>
+
+                            <panel height="2%"></panel>
+                            <panel id="panel_rigo3" height="10%" valign="top" align="right" childLayout="horizontal">
+                                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                      text="p3" textVAlign="center"
+                                      textHAlign="right" height="100%" width="20%"></text>
+                                <panel width="5%">
+                                </panel>
+                                <control id="31" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="32" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="33" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="34" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="35" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="36" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="37" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                            </panel>
+
+                            <panel height="2%"></panel>
+                            <panel id="panel_rigo4" height="10%" valign="top" align="right" childLayout="horizontal">
+                                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                      text="p4" textVAlign="center"
+                                      textHAlign="right" height="100%" width="20%"></text>
+                                <panel width="5%">
+                                </panel>
+                                <control id="41" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="42" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="43" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="44" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="45" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="46" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="47" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                            </panel>
+
+                            <panel height="2%"></panel>
+                            <panel id="panel_rigo5" height="10%" valign="top" align="right" childLayout="horizontal">
+                                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                      text="p5" textVAlign="center"
+                                      textHAlign="right" height="100%" width="20%"></text>
+                                <panel width="5%">
+                                </panel>
+                                <control id="51" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="52" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="53" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="54" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="55" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="56" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="57" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                            </panel>
+
+                            <panel height="2%"></panel>
+                            <panel id="panel_rigo6" height="10%" valign="top" align="right" childLayout="horizontal">
+                                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                      text="p6" textVAlign="center"
+                                      textHAlign="right" height="100%" width="20%"></text>
+                                <panel width="5%">
+                                </panel>
+                                <control id="61" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="62" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="63" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="64" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="65" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="66" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="67" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                            </panel>
+
+                            <panel height="2%"></panel>
+                            <panel id="panel_rigo7" height="10%" valign="top" align="right" childLayout="horizontal">
+                                <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                                      text="p7" textVAlign="center"
+                                      textHAlign="right" height="100%" width="20%"></text>
+                                <panel width="5%">
+                                </panel>
+                                <control id="71" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="72" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="73" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="74" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="75" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="76" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                                <panel width="5%">
+                                </panel>
+                                <control id="77" name="textfield" width="5%"
+                                         height = "100%" valign = "center" align = "center">
+                                </control>
+                            </panel>
+                        </panel>
+                    </panel>
+                </panel>
+                <panel height="2%"></panel>
+            </panel>
+            <panel width="3%"> </panel>
+
+
+
+
+            <panel id="panel_bottom" height="15%" width="98%" valign="bottom" childLayout="horizontal">
+                <panel id="panel_left" height="100%" width="22%" valign="bottom" childLayout="center">
+                </panel>
+                <panel id="panel_center" height="70%" width="30%" valign="bottom" childLayout="horizontal">
+                    <control
+                            name="button" label="Set the network" id="setButton" align="center"
+                            valign="center"
+                            width="80%"
+                            height="80%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="setNetwork()"/>
+                    </control>
+                    <panel height="15%" width="30%" valign="center">
+                    </panel>
+                    <control
+                            name="button" label="Quit" id="quitButton" align="center"
+                            valign="center"
+                            width="80%"
+                            height="80%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="quit()"/>
+                    </control>
+                </panel>
+                <panel id="panel_right" height="100%" width="35%" valign="bottom" childLayout="center">
+                </panel>
+            </panel>
+        </layer>
+
+    </screen>
+
+
+</nifty>

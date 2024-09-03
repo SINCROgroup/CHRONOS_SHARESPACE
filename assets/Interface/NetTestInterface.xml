@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+    <!--    <useStyles style="Interface/nifty-controls/nifty-button.xml"/> -->
+
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <!-- start screen -->
+    <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <screen id="network" controller="Administrator.Presentation.NetworkSetAppState">
+
+        <layer id="backgroundlayer" height="100%" width="100%" childLayout="center"
+               backgroundImage="Interface/Images/startAdmin_background.jpg">
+        </layer>
+
+        <layer id="foregroundlayer" childLayout="vertical">
+            <panel id="panel_top" height="20%" width="70%" align="center" childLayout="center">
+            </panel>
+            <panel id="panel_bottom" height="55%" width="98%" valign="center" childLayout="horizontal">
+                <panel id="panel_bottom_left" height="80%" width="35%" valign="bottom" childLayout="center">
+                </panel>
+                <panel id="panel_bottom_center" height="70%" width="30%" valign="center" childLayout="vertical">
+                    <control
+                            name="button" label="Only Humans" id="onlyHumansButton" align="center"
+                            valign="center"
+                            width="85%"
+                            height="23%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="OnlyHumansMethod(set)"/>
+                    </control>
+                    <panel height="8%" width="30%" valign="center">
+                    </panel>
+                    <control
+                            name="button" label="With Virtual Agents" id="withVirtualAgentsButton" align="center"
+                            valign="center"
+                            width="85%"
+                            height="23%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="WithVirtualAgentsMethod(set)"/>
+                    </control>
+                    <panel height="30%" width="30%" valign="center">
+                    </panel>
+
+
+                    <control
+                            name="button" label="QUIT" id="playButton4" align="center"
+                            width="85%"
+                            height="23%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="quit(set)"/>
+                    </control>
+
+                </panel>
+                <panel id="panel_bottom_right" height="100%" width="35%" valign="bottom" childLayout="center">
+                </panel>
+            </panel>
+        </layer>
+    </screen>
+
+</nifty>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+    
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+    
+    <screen id="loading" controller="HumanPlayer.Presentation.WaitScreenPlayerAppState">
+    	<layer id="backgroundlayer" height="100%" width="100%" childLayout="center" 
+               backgroundImage="Interface/Images/startAdmin_background.jpg">   
+        </layer>
+        
+        <layer id="foregroundlayer" childLayout="vertical">
+        	<panel height="2%" width="70%" valign="center"> </panel>
+            <panel id="panel_top" height="43%" width="60%" align="center" valign="center"
+            		backgroundColor = "#ffff" childLayout="vertical">
+            	<panel height="2%" width="70%" valign="center"> </panel>	
+            	<text font="Interface/Fonts/BookmanOldStyle.fnt" color="#f00f" 
+        					text="Waiting for the other players..." textHAlign="center" textVAlign="top"
+        			width="100%" height="15%"> </text>
+           		<image filename="Interface/Images/wait.jpg" valign="center" align="center"></image>	        	
+            </panel>
+            
+            <panel id="panel_bottom" height="55%" width="98%" valign="center" childLayout="horizontal"> 
+                <panel id="panel_bottom_left" height="100%" width="35%" valign="bottom" childLayout="center">
+                </panel>
+                
+                <panel id="panel_bottom_center" height="100%" width="30%" valign="center"></panel>
+                
+                <panel id="panel_bottom_right" height="100%" width="35%" valign="bottom" childLayout="center">  
+                </panel>
+            </panel>
+        </layer>    
+    </screen>
+</nifty>

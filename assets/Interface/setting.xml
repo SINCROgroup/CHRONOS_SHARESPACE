@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+
+    <screen id="setting" controller="HumanPlayer.Presentation.AcquireNetworkSet">
+        <layer id="backgroundlayer" height="100%" width="100%" childLayout="center"
+               backgroundImage="Interface/Images/startAdmin_background.jpg">
+        </layer>
+
+        <layer id="imageLayer" childLayout="center">
+            <panel id="panel_setting" height="50%" width="50%" align="center" valign="center"
+                   backgroundColor = "#ffff" childLayout="vertical">
+                <panel height="10%" width="70%" valign="center"> </panel>
+                <image filename="Interface/Images/wait.jpg" valign="center" align="center"></image>
+            </panel>
+        </layer>
+
+        <layer id="foregroundlayer" childLayout="vertical">
+            <panel height="10%" width="70%" valign="center"> </panel>
+            <panel id="panel_top" height="70%" width="80%" align="center" valign="center"
+                   childLayout="vertical">
+                <panel height="2%" width="70%" valign="center"> </panel>
+                <panel id="panel_second" height="50%" width="100%" valign="center" childLayout="vertical">
+                    <panel id="panel_loading" width="100%" height="60%" childLayout="horizontal" valign="bottom">
+                    <text font="Interface/Fonts/Default.fnt" color="#ffff"
+                          text="For privacy reasons, we will not associate the data we collect with participants' names." textVAlign="center"
+                          textHAlign="center" height="100%" width = "100%" id="textThanks">
+                    </text>
+                    </panel>
+                    <panel id="panel_1" width="100%" height="15%" childLayout="horizontal" valign="bottom">
+                        <text font="Interface/Fonts/Default.fnt" color="#ffff"
+                              text="Please choose a nickname to proceed:      " textVAlign="center"
+                              textHAlign="center" height="100%" width = "50%" id="textnick">
+                        </text>
+                        <panel height="100%" width="10%" valign="center"> </panel>
+                        <control id="input_nickname" name="textfield" width="40%"
+                                 height = "80%" valign = "center" align = "right">
+                        </control>
+                    </panel>
+                    <panel id="panel_2" width="100%" height="15%" childLayout="horizontal" valign="bottom">
+                        <text font="Interface/Fonts/Default.fnt" color="#ffff"
+                              text="Who you are?:      " textVAlign="center"
+                              textHAlign="center" height="100%" width = "50%" id="texthow">
+                        </text>
+                        <panel height="100%" width="10%" valign="center"> </panel>
+                        <control id="input_nickname_1" name="dropDown" width="40%"
+                                 height = "100%" valign = "center" align = "right">
+                        </control>
+                    </panel>
+
+                </panel>
+
+            </panel>
+
+            <panel id="panel_bottom" height="20%" width="30%" valign="center" align="center" childLayout="horizontal">
+                    <control
+                            name="button" label="Set" id="setButton" align="center"
+                            valign="center"
+                            width="100%"
+                            height="50%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="Set()"/>
+                    </control>
+            </panel>
+        </layer>
+    </screen>
+</nifty>

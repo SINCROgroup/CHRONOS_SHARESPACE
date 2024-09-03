@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+
+    <screen id="chooseL3_rAdmin" controller="Administrator.Presentation.ChooseL3_rScreenAppState">
+
+        <layer id="backgroundlayer" height="100%" width="100%" childLayout="center"
+               backgroundImage="Interface/Images/startAdmin_background.jpg">
+        </layer>
+
+        <layer id="foregroundlayer" childLayout="vertical">
+            <panel height="5%" width="70%" valign="center">
+            </panel>
+            <panel id="panel_top" height="40%" width="90%" align="center" valign="center"
+                   backgroundColor = "#ffff" childLayout="vertical">
+                <control id="title" name="label" color="#f00f" text="Set the features of the 1st L3 substitute"
+                         font = "Interface/Fonts/BookmanOldStyle.fnt"
+                         width="100%" height="40" valign="center" align="center">
+                </control>
+
+                <panel id="panel_number" height = "15%"  valign="center" align="left" childLayout="horizontal">
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Index of the player: " valign="center"
+                          align="center" height="50%" width = "21%"></text>
+                    <control id="input_number" name="textfield" width="5%"
+                             height = "60%" valign = "center" align = "center">
+                    </control>
+                    <panel height="50%" width="2%" valign="center" > </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Mode: " valign="center"
+                          align="center" height="50%" width = "9%"></text>
+                    <control id="input_role" name="dropDown" width="14%"
+                             height = "55%" valign = "center" align = "right">
+                    </control>
+                    <panel height="50%" width="2%" valign="center" > </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8" text="Motor Signature: " valign="center"
+                          align="center" height="50%" width = "18%"></text>
+                    <control id="input_signature" name="dropDown" width="30%"
+                             height = "55%" valign = "center" align = "right">
+                    </control>
+                </panel>
+
+                <panel height="5%" width="70%" valign="center" > </panel>
+                <panel id="panel_dynamic" height = "15%"  valign="center" align="center" childLayout="horizontal">
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8"
+                          text="Inner dynamics: " valign="center"
+                          align="center" height="50%" width = "20%"></text>
+                    <control id="input_dynamic" name="dropDown" width="30%"
+                             height = "55%" valign = "center" align = "right">
+                    </control>
+                    <panel height="50%" width="5%" valign="center" > </panel>
+                    <text font="Interface/Fonts/Default.fnt" color="#00f8" text="Controller: " valign="center"
+                          align="center" height="50%" width = "15%"></text>
+                    <control id="input_controller" name="dropDown" width="30%"
+                             height = "55%" valign = "center" align = "right">
+                    </control>
+                </panel>
+
+                <panel height="5%" width="70%" valign="center" > </panel>
+                <panel id="panel_param1" height = "15%" valign = "center" align = "center" childLayout="horizontal">
+                    <control id="alpha" name="label" color="#00f8" text="aplha [3]: "
+                             font="Interface/Fonts/Default.fnt"
+                             width="18%" height="50" valign="center" align="center">
+                    </control>
+                    <control id="input_alpha" name="textfield" width="5%"
+                             height = "60%" valign = "center" align = "center">
+                    </control>
+                    <control id="beta" name="label" color="#00f8" text="beta [7]: "
+                             font="Interface/Fonts/Default.fnt"
+                             width="18%" height="50" valign="center" align="center">
+                    </control>
+                    <control id="input_beta" name="textfield" width="5%"
+                             height = "60%" valign = "center" align = "center">
+                    </control>
+                    <panel height="50%" width="10%" valign="center" > </panel>
+
+                    <control id="c" name="label" color="#00f8" text="C [60]: "
+                             font="Interface/Fonts/Default.fnt"
+                             width="15%" height="50" valign="center" align="center">
+                    </control>
+                    <control id="input_c" name="textfield" width="5%"
+                             height = "60%" valign = "center" align = "center">
+                    </control>
+                    <control id="delta" name="label" color="#00f8" text="delta [0.5]: "
+                             font="Interface/Fonts/Default.fnt"
+                             width="15%" height="50" valign="center" align="center">
+                    </control>
+                    <control id="input_delta" name="textfield" width="5%"
+                             height = "60%" valign = "center" align = "center">
+                    </control>
+                </panel>
+
+                <panel height="5%" width="70%" valign="center" > </panel>
+                <panel id="panel_param2" height = "15%" valign = "center" align = "center" childLayout="horizontal">
+                    <control id="gamma" name="label" color="#00f8" text="gamma [0.2]: "
+                             font="Interface/Fonts/Default.fnt"
+                             width="18%" height="50" valign="center" align="center">
+                    </control>
+                    <control id="input_gamma" name="textfield" width="5%"
+                             height = "60%" valign = "center" align = "center">
+                    </control>
+                    <control id="omega" name="label" color="#00f8" text="omega [1.75]: "
+                             font="Interface/Fonts/Default.fnt"
+                             width="18%" height="50" valign="center" align="center">
+                    </control>
+                    <control id="input_omega" name="textfield" width="5%"
+                             height = "60%" valign = "center" align = "center">
+                    </control>
+                    <panel height="50%" width="10%" valign="center" > </panel>
+
+                    <control id="k" name="label" color="#00f8" text="K [40]: "
+                             font="Interface/Fonts/Default.fnt"
+                             width="15%" height="50" valign="center" align="center">
+                    </control>
+                    <control id="input_k" name="textfield" width="5%"
+                             height = "60%" valign = "center" align = "center">
+                    </control>
+
+                </panel>
+
+            </panel>
+            <panel id="panel_bottom" height="55%" width="98%" valign="center" childLayout="horizontal">
+
+                <panel id="panel_bottom_left" height="100%" width="35%" valign="bottom" childLayout="center"
+                       backgroundImage="Interface/Images/uomo.png">
+                </panel>
+
+                <panel id="panel_bottom_center" height="70%" width="30%" valign="center" childLayout="vertical">
+                    <control
+                            name="button" label="Set Virtual Player" id="setButton" align="center"
+                            valign="center"
+                            width="80%"
+                            height="20%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="setVP()"/>
+                    </control>
+                    <panel height="15%" width="30%" valign="center">
+                    </panel>
+                    <control
+                            name="button" label="Quit" id="quitButton" align="center"
+                            valign="center"
+                            width="80%"
+                            height="20%"
+                            visibleToMouse="true"
+                            font="Interface/Fonts/BookmanOldStyle.fnt">
+                        <interact onClick="quit()"/>
+                    </control>
+                </panel>
+
+                <panel id="panel_bottom_right" height="100%" width="35%" valign="bottom" childLayout="center"
+                       backgroundImage="Interface/Images/icub.png">
+                </panel>
+            </panel>
+        </layer>
+
+    </screen>
+</nifty>
